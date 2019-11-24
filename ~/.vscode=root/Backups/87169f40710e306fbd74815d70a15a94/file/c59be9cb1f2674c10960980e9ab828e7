@@ -1,0 +1,10 @@
+file:///home/sunilkumarhr5593/frontend/Dockerfile.dev {"mtime":1574539934037,"size":104,"etag":"348226ns13b","orphaned":false}
+FROM node:alpine
+
+WORKDIR /'app'
+COPY package.json .
+RUN npm install
+
+COPY . .
+CMD ["npm","run","start"]
+
